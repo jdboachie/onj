@@ -22,7 +22,8 @@ export default function Home() {
     <main className="font-sans p-24 max-md:px-12 max-w-5xl mx-auto grid grid-cols-6 justify-content-start h-screen">
       <Link href={'https://read.cv/jood'} className={``}>Jude Boachie</Link>
       <h1 className={`text-5xl grid col-span-6 ${librecaslontext.className}`}>
-        Learning about web animations, bringing software to life.
+        Learning about web craft,<br/>
+        bringing software to life.
       </h1>
       <div className="grid col-span-2">Great stuff coming...</div>
     </main>

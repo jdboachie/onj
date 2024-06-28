@@ -16,7 +16,7 @@ function Animations() {
     </div>
     <div className="grid col-span-6">
       <h1
-        className={`text-3xl md:text-6xl tracking-tight`}
+        className={`text-3xl md:text-5xl tracking-tight`}
       >
         Animations
       </h1>

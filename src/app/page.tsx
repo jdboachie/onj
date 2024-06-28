@@ -18,7 +18,7 @@ export default function Home() {
       </div>
       <div className=" grid">
         <h1
-          className={`text-3xl md:text-4xl tracking-tight`}
+          className={`text-3xl md:text-5xl tracking-tight`}
           >
           Learning about web {' '}
           <span className={`italic ${librecaslontext.className}`}>craft</span>,

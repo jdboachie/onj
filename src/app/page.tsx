@@ -18,14 +18,12 @@ export default function Home() {
       </div>
       <div className=" grid">
         <h1
-          className={`text-3xl md:text-6xl tracking-tight`}
+          className={`text-3xl md:text-4xl tracking-tight`}
           >
           Learning about web {' '}
           <span className={`italic ${librecaslontext.className}`}>craft</span>,
           <br/>
-          bringing {' '}
-          <span className={`${GeistMono.className}`}>software </span>{' '}
-          to life.
+          bringing software to life.
         </h1>
       </div>
       <div className=" grid grid-cols-2 md:grid-cols-3">

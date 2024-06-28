@@ -1,12 +1,12 @@
-import { librecaslontext, newsreader } from "@/lib/fonts";
-import { GeistMono } from "geist/font/mono";
 import Link from "next/link";
+import { GeistMono } from "geist/font/mono";
+import { librecaslontext } from "@/lib/fonts";
 
 export default function Home() {
 
   return (
     <main
-      className="font-sans md:p-24 px-12 max-w-4xl mx-auto grid grid-rows-3 grid-cols-6 gap-1 justify-content-start h-screen"
+      className="md:p-24 px-12 max-w-5xl mx-auto grid grid-rows-3 grid-cols-6 gap-1 justify-content-start h-screen"
     >
       <div className="">
         <Link
@@ -18,13 +18,13 @@ export default function Home() {
       </div>
       <div className="grid col-span-6">
         <h1
-          className={`text-3xl md:text-5xl`}
+          className={`text-3xl md:text-5xl tracking-tight`}
           >
-          Learning about {' '}
+          Learning about web {' '}
           <span className={`italic ${librecaslontext.className}`}>craft</span>,
           <br/>
           bringing {' '}
-          <span className={`font-mono`}>software</span>{' '}
+          <span className={''}>software</span>{' '}
           to life.
         </h1>
       </div>

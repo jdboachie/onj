@@ -6,9 +6,9 @@ export default function Home() {
 
   return (
     <main
-      className="md:p-24 px-12 max-w-5xl mx-auto grid grid-rows-3 grid-cols-6 gap-1 justify-content-start h-screen"
+      className="md:px-24 px-12 py-24 max-w-5xl mx-auto grid grid-rows-3 grid-cols-3 md:grid-cols-6 gap-1 justify-content-start h-screen"
     >
-      <div className="">
+      <div className="col-span-3">
         <Link
           href={'https://read.cv/jood'}
           className={`hover:text-neutral-950`}

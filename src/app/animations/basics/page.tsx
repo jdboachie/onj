@@ -72,12 +72,12 @@ function Basics() {
   const animationBoxStyles = 'aspect-square bg-neutral-100 drop-shadow shadow-inner shadow-white/10  dark:bg-neutral-800 rounded-lg place-items-center grid grid-flow-col'
 
   return (
-    <div className="items-center grid gap-10 lg:overflow-hidden">
+    <div className="h-fit items-center grid gap-10 lg:overflow-hidden">
       <motion.section
         variants={gridContainerVariants}
         initial='hidden'
         animate='show'
-        className='lg:max-w-5xl w-full h-fit mx-auto grid grid-cols-1 md:grid-cols-2 grid-flow-row md:grid-rows-2 p-10 gap-10'
+        className='lg:max-w-5xl w-full h-fit mx-auto grid grid-cols-1 md:grid-cols-2 grid-flow-row md:grid-rows-2 md:p-10 p-0 gap-10'
       >
         <motion.div
           variants={gridSquareVariants}
@@ -144,8 +144,8 @@ function Basics() {
               left: -2,
             }}
             dragTransition={{
-              bounceStiffness: 5000,
-              bounceDamping: 15,
+              bounceStiffness: 1500,
+              bounceDamping: 25,
             }}
             className="size-1/3 bg-orange-600 shadow-inner shadow-orange-400 rounded-full cursor-grab"
           />
@@ -203,36 +203,29 @@ function Basics() {
           animate={mainControls}
           initial="hidden"
           variants={{
-            hidden: { opacity: 0, y: 75 },
+            hidden: { opacity: 0, y: -20 },
             visible: { opacity: 1, y: 0 },
           }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.3, duration: 1 }}
           className="text-5xl font-bold text-neutral-700 dark:text-neutral-200 text-center"
           >
           Just Keep Scrolling
         </motion.h1>
         <motion.p
           style={{ translateX: paragraphOneValue }}
-          className='text-neutral-700 dark:text-neutral-200  text-lg w-3/4 mx-auto'
+          className='text-neutral-700 dark:text-neutral-200  text-lg md:w-3/4 mx-auto'
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.
           In condimentum facilisis porta. Sed nec diam eu diam mattis viverra.
-          Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis.
-          Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi.
-          Aliquam erat volutpat. Curabitur venenatis, nisl in bib endum commodo, sapien justo cursus urna.
         </motion.p>
 
         <motion.p
           style={{ translateX: paragraphTwoValue }}
-          className='text-neutral-700 dark:text-neutral-200 text-lg w-3/4 mx-auto'
+          className='text-neutral-700 dark:text-neutral-200 text-lg md:w-3/4 mx-auto'
         >
           Integer adipiscing erat eget risus sollicitudin pellentesque et non erat.
           Maecenas nibh dolor, malesuada et bibendum a, adipiscing id est.
           Duis vulputate diam in odio vestibulum vulpu tate. Maecenas aliquam, felis vitae lacinia dictum, mi ligula cursus velit, nec rutrum augue urna in dolor.
-          Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor.
-          Aliquam congue fermentum nisl.
-          Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula.
-          Aliquam dapibus tincidunt metus.
         </motion.p>
       </section>
     </div>

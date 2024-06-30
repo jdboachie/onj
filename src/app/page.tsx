@@ -5,10 +5,8 @@ import { librecaslontext } from "@/lib/fonts";
 export default function Home() {
 
   return (
-    <main
-      className="md:px-24 px-12 py-24 max-w-5xl mx-auto grid grid-rows-3 grid-cols-1 gap-2 md:gap-6 justify-content-start h-screen"
-    >
-      <div className="">
+    <>
+      <div className="items-end grid">
         <Link
           href={'https://read.cv/jood'}
           className={`hover:text-neutral-950 dark:hover:text-white`}
@@ -16,17 +14,17 @@ export default function Home() {
           Jude Boachie
         </Link>
       </div>
-      <div className=" grid">
+      <div className="grid">
         <h1
           className={`text-3xl md:text-5xl tracking-tight`}
           >
-          Learning about web {' '}
-          <span className={`italic ${librecaslontext.className}`}>craft</span>,
+          Designing {' '}
+          <span className={`italic ${librecaslontext.className}`}>systems</span>
           <br/>
-          bringing software to life.
+          around <span className={`${GeistMono.className}`}>code</span><span className="border-r-black dark:border-r-white border-r-2 animate-pulse" /> for people.
         </h1>
       </div>
-      <div className=" grid grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-2 md:grid-cols-3">
         <div className="">
           <Link href={'/animations'} className="hover:text-neutral-950 dark:hover:text-white hover:underline underline-offset-4 transition-all duration-300 ease-in">/animations</Link>
         </div>
@@ -34,6 +32,6 @@ export default function Home() {
           <Link href={'/typography'} className={`hover:text-neutral-950 dark:hover:text-white hover:underline underline-offset-4 transition-all duration-300 ease-in`}>/typography</Link>
         </div>
       </div>
-    </main>
+    </>
   );
 }

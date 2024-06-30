@@ -23,7 +23,9 @@ export default function RootLayout({
           enableSystem
           // disableTransitionOnChange
         >
-          {children}
+          <main className="md:px-24 px-12 py-12 max-w-5xl mx-auto grid grid-rows-3 grid-cols-1 md:gap-6 gap-2 justify-content-start h-screen">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

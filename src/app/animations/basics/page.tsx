@@ -72,12 +72,12 @@ function Basics() {
   const animationBoxStyles = 'aspect-square bg-neutral-100 drop-shadow shadow-inner shadow-white/10  dark:bg-neutral-800 rounded-lg place-items-center grid grid-flow-col'
 
   return (
-    <div className="h-fit items-center grid gap-10 lg:overflow-hidden">
+    <div className="h-fit items-center grid gap-10 sm:overflow-hidden">
       <motion.section
         variants={gridContainerVariants}
         initial='hidden'
         animate='show'
-        className='lg:max-w-5xl w-full h-fit mx-auto grid grid-cols-1 md:grid-cols-2 grid-flow-row md:grid-rows-2 md:p-10 p-0 gap-10'
+        className='sm:max-w-5xl w-full h-fit mx-auto grid grid-cols-1 sm:grid-cols-2 grid-flow-row sm:grid-rows-2 sm:p-10 p-0 gap-10'
       >
         <motion.div
           variants={gridSquareVariants}
@@ -213,7 +213,7 @@ function Basics() {
         </motion.h1>
         <motion.p
           style={{ translateX: paragraphOneValue }}
-          className='text-neutral-700 dark:text-neutral-200  text-lg md:w-3/4 mx-auto'
+          className='text-neutral-700 dark:text-neutral-200  text-lg sm:w-3/4 mx-auto'
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.
           In condimentum facilisis porta. Sed nec diam eu diam mattis viverra.
@@ -221,7 +221,7 @@ function Basics() {
 
         <motion.p
           style={{ translateX: paragraphTwoValue }}
-          className='text-neutral-700 dark:text-neutral-200 text-lg md:w-3/4 mx-auto'
+          className='text-neutral-700 dark:text-neutral-200 text-lg sm:w-3/4 mx-auto'
         >
           Integer adipiscing erat eget risus sollicitudin pellentesque et non erat.
           Maecenas nibh dolor, malesuada et bibendum a, adipiscing id est.

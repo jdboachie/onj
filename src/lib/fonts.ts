@@ -1,10 +1,9 @@
-import { Libre_Caslon_Text, Newsreader } from 'next/font/google'
+import { Inter_Tight, Libre_Caslon_Text } from 'next/font/google'
 
-export const newsreader = Newsreader({
+export const sans = Inter_Tight({
   subsets: ['latin'],
   style: ['italic', 'normal']
 })
-
 
 export const librecaslontext = Libre_Caslon_Text({
   subsets: ['latin'],

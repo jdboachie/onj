@@ -1,31 +1,37 @@
-'use client'
-
 import Link from "next/link";
-import { motion, useScroll } from "framer-motion";
-import { Libre_Caslon_Text, Newsreader } from 'next/font/google'
-
-
-const newsreader = Newsreader({
-  subsets: ['latin'],
-})
-
-const librecaslontext = Libre_Caslon_Text({
-  subsets: ['latin'],
-  weight: ['400', '700']
-})
+import { librecaslontext } from "@/lib/fonts";
 
 export default function Home() {
 
-  const { scrollYProgress } = useScroll()
-
   return (
-    <main className="font-sans p-24 max-md:px-12 max-w-5xl mx-auto grid grid-cols-6 justify-content-start h-screen">
-      <Link href={'https://read.cv/jood'} className={``}>Jude Boachie</Link>
-      <h1 className={`text-5xl grid col-span-6 ${librecaslontext.className}`}>
-        Learning about web craft,<br/>
-        bringing software to life.
-      </h1>
-      <div className="grid col-span-2">Great stuff coming...</div>
-    </main>
+    <>
+      <div className="items-end grid">
+        <Link
+          href={'https://read.cv/jood'}
+          className={`hover:text-neutral-950 dark:hover:text-white`}
+          >
+          Jude Boachie
+        </Link>
+      </div>
+      <div className="grid">
+        <div className="grid items-center">
+          <h1
+            className={`text-4xl sm:text-5xl`}
+            >
+            Designing {' '} &nbsp;<span className={`italic ${librecaslontext.className}`}>systems</span>
+            <br/>
+            around code for people.
+          </h1>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3">
+        <div className="">
+          <Link href={'/animations'} className="hover:text-neutral-950 dark:hover:text-white hover:underline underline-offset-4 transition-all duration-300 ease-in">/animations</Link>
+        </div>
+        <div className={``}>
+          <Link href={'/typography'} className={`hover:text-neutral-950 dark:hover:text-white hover:underline underline-offset-4 transition-all duration-300 ease-in`}>/typography</Link>
+        </div>
+      </div>
+    </>
   );
 }

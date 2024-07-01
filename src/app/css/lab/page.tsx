@@ -1,16 +1,17 @@
 'use client';
 
-import { LazyMotion, domAnimation, m } from 'framer-motion'
+import { LazyMotion, delay, domAnimation, m } from 'framer-motion'
 
 function One() {
 
   const paragraphVariants = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 
   }
 
   const paragraphClasses = 'leading-7 [&:not(:first-child)]:my-4'
+
   return (
     <>
     <LazyMotion features={domAnimation} strict>
@@ -40,6 +41,7 @@ function One() {
         }}
         initial='hidden'
         animate='show'
+        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.3 }}
         className='text-neutral-700 dark:text-neutral-200  font-sans tracking-tight text-base md:p-12 my-16 grid h-fit'
       >
         <m.p className={paragraphClasses} variants={paragraphVariants}>

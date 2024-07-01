@@ -3,6 +3,7 @@ import { sans } from "@/lib/fonts";
 import type { Metadata } from "next";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/theme-provider";
+import { GeistSans } from "geist/font/sans";
 
 export const metadata: Metadata = {
   title: "onj",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`dark:text-neutral-50 text-neutral-700 dark:bg-neutral-900 h-screen ${GeistMono.variable} ${sans.className}`}>
+      <body className={`dark:text-neutral-50 text-neutral-700 dark:bg-neutral-900 h-screen ${GeistMono.variable} ${GeistSans.variable} ${sans.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

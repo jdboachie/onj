@@ -1,80 +1,89 @@
-import React from 'react'
+'use client';
+
+import { motion } from 'framer-motion'
 
 function One() {
+
+  const paragraphVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+
+  }
   return (
     <>
-    <div className='fixed top-0 left-0 w-screen overflow-hidden h-[10%] dark:h-[9%] bg-gradient-to-b from-white/90 via-white/70 to-transparent dark:from-neutral-900/90 dark:via-neutral-900/70 dark:to-transparent backdrop-blur-sm backdrop-opacity-35' />
-    <section className='typography py-10 h-fit'>
-      <h1>Understanding CSS: A Guide for Beginners</h1>
+    {/* <div className='fixed top-0 left-0 w-screen overflow-hidden h-[10%] dark:h-[9%] bg-gradient-to-b from-white/90 via-white/70 to-transparent dark:from-neutral-900/90 dark:via-neutral-900/70 dark:to-transparent backdrop-blur-sm backdrop-opacity-50' /> */}
+    <div
+      className='
+      h-fit
+      after:z-50
+      after:-top-1
+      after:fixed
+      after:inset-0
+      after:h-16
+      after:bg-gradient-to-b
+      after:blur-sm
+      after:backdrop-opacity-40
+     after:from-neutral-900/95 after:via-neutral-900/80 after:to-transparent
+      '
+    >
+    <motion.section
+      variants={{
+        hidden: { opacity: 0 },
+        show: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.1,
+          }
+        }
+      }}
+      initial='hidden'
+      animate='show'
+      className='typography text-neutral-200 font-sans tracking-tight text-base md:p-12 my-16 grid h-fit'
+    >
+      <motion.p variants={paragraphVariants}>
+        I am consistently unhappy with my creative output. My job title includes designer, but Im not good at designing something from scratch.
+      </motion.p>
 
-      <p>
-        CSS, or Cascading Style Sheets, is a language used to describe the presentation of a document written in HTML or XML. CSS handles the look and feel of the web page. Using CSS, you can control the color of the text, the style of fonts, spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.
-      </p>
+      <motion.p variants={paragraphVariants}>
+        None of work I create matches up to the work of designers that I admire. At a minimum, I want to feel more comfortable designing work that meets my own minimum expectations of quality. Impostor Syndrome probably plays a big part (especially working with such talented colleagues!) but maybe I simply need practice.
+      </motion.p>
 
-      <h2>Why Use CSS?</h2>
-      <p>
-        CSS is a powerful tool for web designers and developers for several reasons:
-      </p>
-      <ul>
-        <li>
-          <strong>Separation of Content and Design:</strong> By separating the content of HTML from the design and layout in CSS, we make our content more accessible, easier to maintain, and more flexible.
-        </li>
-        <li>
-          <strong>Reusability:</strong> CSS allows us to reuse styles across multiple pages, making our design more consistent and our code more efficient.
-        </li>
-        <li>
-          <strong>Responsive Design:</strong> With CSS, we can create layouts that adjust to different screen sizes, providing a better user experience on mobile devices, tablets, and desktops.
-        </li>
-      </ul>
+      <motion.p variants={paragraphVariants}>
+        Creativity is definitely my strong suit. Im logical. Building on past experience to improve future work is something I am good at. Creating something new is not. Thats why it feels like everything I create is a remix of my past work, or the work of others.
+      </motion.p>
 
-      <h2>Basic Syntax of CSS</h2>
-      <p>
-        CSS is composed of style rules that the browser applies to the HTML document. Each rule consists of a selector and a declaration block.
-      </p>
-      <pre>
-        <code>
-          selector &#123; property: value; &#125;
-        </code>
-      </pre>
-      <p>
-        For example, to change the color of all paragraphs to blue, you would write:
-      </p>
-      <pre>
-        <code>
-          p &#123; color: blue; &#125;
-        </code>
-      </pre>
+      <motion.p variants={paragraphVariants}>
+      Does this still count as my creative output, though? Id argue that anything new in design is just old stuff reworked in new ways. Buried in sarcasm, Mark Dalgleish explains that step in the design process:
+      </motion.p>
 
-      <h2>Selectors</h2>
-      <p>
-        Selectors are used to target the HTML elements that you want to style. There are several types of selectors:
-      </p>
-      <ul>
-        <li><strong>Element Selector:</strong> Targets all elements of a given type. (e.g., <code>p</code> targets all paragraph elements)</li>
-        <li><strong>Class Selector:</strong> Targets elements with a specific class attribute. (e.g., <code>.classname</code>)</li>
-        <li><strong>ID Selector:</strong> Targets a single element with a specific id attribute. (e.g., <code>#idname</code>)</li>
-        <li><strong>Attribute Selector:</strong> Targets elements based on their attributes. (e.g., <code>[type=&quot;text&quot;]</code>)</li>
-        <li><strong>Pseudo-class Selector:</strong> Targets elements based on their state. (e.g., <code>a:hover</code> for links when they are hovered over)</li>
-      </ul>
+      <motion.p variants={paragraphVariants}>
+      If youre a developer who finds design difficult, youre probably skipping the ‘inspiration’ phase—which, in non-designer speak, roughly translates to ‘look at other designs and rip off all the good ideas’.
+      </motion.p>
 
-      <h2>Box Model</h2>
-      <p>
-        Understanding the CSS box model is essential for designing layouts. The box model describes the rectangular boxes generated for elements in the document tree and includes the content, padding, border, and margin areas.
-      </p>
-      <ul>
-        <li><strong>Content:</strong> The actual content of the box, where text and images appear.</li>
-        <li><strong>Padding:</strong> The space between the content and the border. Padding is transparent.</li>
-        <li><strong>Border:</strong> A border surrounding the padding (if any) and content.</li>
-        <li><strong>Margin:</strong> The space outside the border. Margins are also transparent.</li>
-      </ul>
+      <motion.p variants={paragraphVariants}>
+      This is a totally valid way to work. Its probably the most efficient. Youre not the first person working on your problems, so use what other people have already discovered. But to what degree can we claim this work as our own?
+      </motion.p>
+      <motion.p variants={paragraphVariants}>
+        None of work I create matches up to the work of designers that I admire. At a minimum, I want to feel more comfortable designing work that meets my own minimum expectations of quality. Impostor Syndrome probably plays a big part (especially working with such talented colleagues!) but maybe I simply need practice.
+      </motion.p>
 
-      <h2>Conclusion</h2>
-      <p>
-        CSS is a fundamental technology for creating visually appealing and responsive websites. By mastering CSS, you can significantly enhance the user experience and create web pages that are both beautiful and functional. Start experimenting with different styles, layouts, and designs to see the endless possibilities that CSS offers.
-      </p>
+      <motion.p variants={paragraphVariants}>
+        Creativity is not my strong suit. Im logical. Building on past experience to improve future work is something I am good at. Creating something new is not. Thats why it feels like everything I create is a remix of my past work, or the work of others.
+      </motion.p>
 
-      <p>Happy styling!</p>
-    </section>
+      <motion.p variants={paragraphVariants}>
+      Does this still count as my creative output, though? Id argue that anything new in design is just old stuff reworked in new ways. Buried in sarcasm, Mark Dalgleish explains that step in the design process:
+      </motion.p>
+
+      <motion.p variants={paragraphVariants}>
+      If youre a developer who finds design difficult, youre probably skipping the ‘inspiration’ phase—which, in non-designer speak, roughly translates to ‘look at other designs and rip off all the good ideas’.
+      </motion.p>
+
+      <motion.p variants={paragraphVariants}>
+      This is a totally valid way to work. Its probably the most efficient. Youre not the first person working on your problems, so use what other people have already discovered. But to what degree can we claim this work as our own?
+      </motion.p>
+    </motion.section>
+    </div>
     </>
   )
 }

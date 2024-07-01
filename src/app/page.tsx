@@ -31,6 +31,9 @@ export default function Home() {
         <div className={``}>
           <Link href={'/typography'} className={`hover:text-neutral-950 dark:hover:text-white hover:underline underline-offset-4 transition-all duration-300 ease-in`}>/typography</Link>
         </div>
+        <div className={``}>
+          <Link href={'/css'} className={`hover:text-neutral-950 dark:hover:text-white hover:underline underline-offset-4 transition-all duration-300 ease-in`}>/css</Link>
+        </div>
       </div>
     </>
   );
